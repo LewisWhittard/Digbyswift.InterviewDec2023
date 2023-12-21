@@ -12,7 +12,7 @@ public class StaffRepository : IStaffRepository
         return AllStaff().First(x => x.Id == id);
     }
 
-    private IEnumerable<Staff> AllStaff()
+    public IEnumerable<Staff> AllStaff()
     {
         return new Staff[]
         {

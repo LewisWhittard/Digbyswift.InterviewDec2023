@@ -25,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Digbyswift.InterviewDec2023.Infrastructure\Digbyswift.InterviewDec2023.Infrastructure.csproj" />
+      <Folder Include="BuissnessLogic\" />
     </ItemGroup>
 
 </Project>

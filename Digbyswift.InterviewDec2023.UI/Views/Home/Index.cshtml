@@ -1,11 +1,22 @@
-﻿@{
+﻿@model Digbyswift.InterviewDec2023.UI.BuissnessLogic.ViewModels.HomeIndexViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Staff List</h1>
     <p>Select to load <select>
-        <option>Select one</option>
-    </select></p>
-    <div id="staff-container"></div>
+    @foreach (var item in Model.ListStaff)
+            {
+                <option id="@item.Id"> @item.FullName </option>
+            }
+        </select></p>
+    <div id="staff-container">
+       <p id="iD"> </p>
+        <p id="FullName"> </p>
+        <p id="Email"> </p>
+        <p id="JobTitle"> </p>
+
+    </div>
 </div>
