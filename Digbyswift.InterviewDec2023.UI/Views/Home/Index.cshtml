@@ -6,12 +6,29 @@
 
 <div class="text-center">
     <h1 class="display-4">Staff List</h1>
+    @if (Model.FirstStaff.Id != -1)
+    {
     <p>Select to load <select>
     @foreach (var item in Model.ListStaff)
             {
                 <option id="@item.Id"> @item.FullName </option>
             }
-        </select></p>
+            </select></p>
+    }
+
+    else
+    {
+        <p>
+            Select to load
+            <select disabled>
+                @foreach (var item in Model.ListStaff)
+                {
+                    <option id="@item.Id"> @item.FullName </option>
+                }
+            </select>
+        </p>
+    }
+
     <div id="staff-container">
        <p id="ID"> @Model.FirstStaff.Id </p>
         <p id="FullName"> @Model.FirstStaff.FullName </p>
