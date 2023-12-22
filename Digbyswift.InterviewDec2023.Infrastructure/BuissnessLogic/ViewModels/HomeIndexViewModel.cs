@@ -5,7 +5,7 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
     public class HomeIndexViewModel
     {
         public List<StaffViewModel> ListStaff { get; set; }
-        public StaffViewModel FirstStaff { get; set; }
+
 
         public HomeIndexViewModel(List<Staff> staff)
         {
@@ -20,7 +20,7 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
                 }
 
                 ListStaff = lSVM;
-                FirstStaff = lSVM.FirstOrDefault();
+
             }
             else
             {
@@ -30,7 +30,7 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
                 List<StaffViewModel> lSVM = new List<StaffViewModel>();
                 lSVM.Add(noneViewModel);
                 ListStaff = lSVM;
-                FirstStaff = lSVM.FirstOrDefault();
+
             }
         }
     }

@@ -76,7 +76,7 @@
 
 <div class="text-center">
     <h1 class="display-4">Staff List</h1>
-    @if (Model.FirstStaff.Id != -1)
+    @if (Model.ListStaff[0].Id != -1)
     {
         <p>
             Select to load
@@ -102,10 +102,10 @@
     }
 
     <div id="staff-container">
-        <p id="ID"> @Model.FirstStaff.Id </p>
-        <p id="FullName"> @Model.FirstStaff.FullName </p>
-        <p id="Email"> @Model.FirstStaff.Email </p>
-        <p id="JobTitle"> @Model.FirstStaff.JobTitle </p>
-        <p id="Likes"> @Model.FirstStaff.Likes </p>
+        <p id="ID"> @Model.ListStaff[0].Id </p>
+        <p id="FullName"> @Model.ListStaff[0].FullName </p>
+        <p id="Email"> @Model.ListStaff[0].Email </p>
+        <p id="JobTitle"> @Model.ListStaff[0].JobTitle </p>
+        <p id="Likes"> @Model.ListStaff[0].Likes </p>
     </div>
 </div>
