@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using Digbyswift.InterviewDec2023.UI.BuissnessLogic.Service;
-using Digbyswift.InterviewDec2023.UI.BuissnessLogic.ViewModels;
+using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic;
+using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service;
+using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels;
 
 
 
-namespace Digbyswift.InterviewDec2023.UI.Controllers;
+namespace Digbyswift.InterviewDec2023.Infrastructure.Controllers;
 
 public class HomeController : Controller
 {

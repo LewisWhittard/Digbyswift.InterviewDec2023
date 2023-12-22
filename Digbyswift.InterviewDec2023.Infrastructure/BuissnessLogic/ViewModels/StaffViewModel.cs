@@ -1,7 +1,7 @@
 ﻿using Digbyswift.InterviewDec2023.Infrastructure;
 using System.ComponentModel.DataAnnotations;
 
-namespace Digbyswift.InterviewDec2023.UI.BuissnessLogic.ViewModels
+namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
 {
 
     public class StaffViewModel

@@ -1,6 +1,6 @@
 ﻿using Digbyswift.InterviewDec2023.Infrastructure;
 
-namespace Digbyswift.InterviewDec2023.UI.BuissnessLogic.Service
+namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service
 {
     public class StaffService
     {

@@ -1,8 +1,6 @@
 ﻿using Digbyswift.InterviewDec2023.Infrastructure;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
-using System.Security.Cryptography.Xml;
 
-namespace Digbyswift.InterviewDec2023.UI.BuissnessLogic.ViewModels
+namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
 {
     public class HomeIndexViewModel
     {
