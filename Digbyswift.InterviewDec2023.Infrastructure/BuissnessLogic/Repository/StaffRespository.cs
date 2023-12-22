@@ -1,11 +1,15 @@
-﻿namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Repository;
+﻿using Newtonsoft.Json;
+using System.Text.Json;
+
+namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Repository;
+
 
 public interface IStaffRepository
 {
     Staff Get(int id);
 }
 
-public class StaffRepository : IStaffRepository
+public class StaffRepositoryJson : IStaffRepository
 {
     public Staff Get(int id)
     {
@@ -14,33 +18,28 @@ public class StaffRepository : IStaffRepository
 
     public IEnumerable<Staff> AllStaff()
     {
-        return new Staff[]
+        // Specify the path to your JSON file
+        string jsonFilePath = Path.Combine(Directory.GetCurrentDirectory() + "/Data", "Staff.json");
+
+        // Read the entire JSON file content
+        string jsonContent = File.ReadAllText(jsonFilePath);
+
+        // Check if the JSON content is empty
+        if (string.IsNullOrWhiteSpace(jsonContent))
         {
-            new Staff()
-            {
-                Id = 123,
-                FullName = "Kieron McIntyre",
-                Email = "kieron@digbyswift.com",
-                JobTitle = "Owner/Lead Developer",
-                Likes = new [] {"Code", "Karate"}
-            },
-            new Staff()
-            {
-                Id = 556,
-                FullName = "Joe Earnshaw",
-                Email = "joe@digbyswift.com",
-                JobTitle = "Senior Developer"
-            },
-            new Staff()
-            {
-                Id = 838,
-                FullName = "Owen Manby",
-                Email = "owen@digbyswift.com",
-                Likes = new [] {"Tintin","Asterix"}
-            },
-        };
+            return new List<Staff>();
+        }
+
+        StaffContainer sC = JsonConvert.DeserializeObject<StaffContainer>(jsonContent, new JsonSerializerSettings
+        {
+            TypeNameHandling = TypeNameHandling.All
+        });
+
+        return sC.Staff;
     }
 }
+
+
 
 public class Staff
 {
@@ -63,4 +62,20 @@ public class Staff
         JobTitle = jobTitle;
         Likes = likes;
     }
+}
+
+public class StaffContainer
+{
+    public Staff[] Staff { get; set; }
+
+    public StaffContainer()
+    {
+        
+    }
+
+    public StaffContainer(Staff[] data)
+    {
+        Staff = data;
+    }
+
 }

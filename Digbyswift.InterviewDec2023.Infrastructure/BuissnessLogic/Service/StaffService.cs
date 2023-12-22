@@ -4,11 +4,11 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service
 {
     public class StaffService
     {
-        private static StaffRepository sR { get; set; }
+        private static StaffRepositoryJson sR { get; set; }
 
         public StaffService()
         {
-            sR = new StaffRepository();
+            sR = new StaffRepositoryJson();
         }
 
         public List<Staff> AllStaff()

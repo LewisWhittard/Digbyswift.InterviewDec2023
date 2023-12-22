@@ -7,7 +7,7 @@ namespace DigbySwiftUnitTests
         [Fact]
         public void AllStaff()
         {
-            StaffRepository sR = new StaffRepository();
+            StaffRepositoryJson sR = new StaffRepositoryJson();
 
             var Data = sR.AllStaff().ToList();
 
@@ -36,7 +36,7 @@ namespace DigbySwiftUnitTests
         [Fact]
         public void GetById()
         {
-            StaffRepository sR = new StaffRepository();
+            StaffRepositoryJson sR = new StaffRepositoryJson();
 
             var Data0 = sR.Get(123);
             var Data1 = sR.Get(838);

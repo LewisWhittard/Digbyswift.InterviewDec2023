@@ -1,0 +1,31 @@
+{
+  "Staff": [
+    {
+      "Id": 123,
+      "FullName": "Kieron McIntyre",
+      "Email": "kieron@digbyswift.com",
+      "JobTitle": "Owner/Lead Developer",
+      "Likes": [
+        "Code",
+        "Karate"
+      ]
+    },
+    {
+      "Id": 556,
+      "FullName": "Joe Earnshaw",
+      "Email": "joe@digbyswift.com",
+      "JobTitle": "Senior Developer",
+      "Likes": null
+    },
+    {
+      "Id": 838,
+      "FullName": "Owen Manby",
+      "Email": "owen@digbyswift.com",
+      "JobTitle": null,
+      "Likes": [
+        "Tintin",
+        "Asterix"
+      ]
+    }
+  ]
+}
