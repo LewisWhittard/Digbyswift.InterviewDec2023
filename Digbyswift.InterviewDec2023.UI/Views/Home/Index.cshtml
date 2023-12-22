@@ -1,5 +1,75 @@
 ﻿@model Digbyswift.InterviewDec2023.UI.BuissnessLogic.ViewModels.HomeIndexViewModel
 
+<script>
+    class DataRetrieval {
+        constructor() {
+            // Initialize with the HTML elements
+            this.idElement = document.getElementById('ID');
+            this.fullNameElement = document.getElementById('FullName');
+            this.emailElement = document.getElementById('Email');
+            this.jobTitleElement = document.getElementById('JobTitle');
+            this.likesElement = document.getElementById('Likes');
+        }
+
+        async getStaffById(id) {
+            try {
+                const response = await fetch("/employee/" + id);
+                if (!response.ok) {
+                    throw new Error(`Error fetching staff data: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+
+                // Handle the successful response here
+                console.log(data);
+
+                // Update HTML elements with the retrieved data
+                this.idElement.textContent = data.id;
+                this.fullNameElement.textContent = data.fullName;
+                this.emailElement.textContent = data.email;
+                this.jobTitleElement.textContent = data.jobTitle;
+                this.likesElement.textContent = data.likes;
+
+                return data; // Return the data for further use
+            } catch (error) {
+                // Handle the error response here
+                console.error("Error fetching staff data:", error);
+            }
+        }
+
+        // Method to clear values
+        ChangeValues(Id, FullName, Email, JobTitle, Likes) {
+            this.idElement.textContent = Id;
+            this.fullNameElement.textContent = FullName;
+            this.emailElement.textContent = Email;
+            this.jobTitleElement.textContent = JobTitle;
+            this.likesElement.textContent = Likes;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const dataRetrievalInstance = new DataRetrieval();
+
+        const staffDropdown = document.getElementById('staffDropdown');
+
+        staffDropdown.addEventListener('change', async (event) => {
+            // Get the selected option
+            const selectedOption = staffDropdown.options[staffDropdown.selectedIndex];
+
+            // Example of clearing values
+            const data = await dataRetrievalInstance.getStaffById(selectedOption.id);
+
+            const Id = data.id;
+            const FullName = data.fullName;
+            const Email = data.email;
+            const JobTitle = data.jobTitle;
+            const Likes = data.likes;
+
+            dataRetrievalInstance.ChangeValues(Id, FullName, Email, JobTitle, Likes);
+        });
+    });
+</script>
+
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -8,8 +78,10 @@
     <h1 class="display-4">Staff List</h1>
     @if (Model.FirstStaff.Id != -1)
     {
-    <p>Select to load <select>
-    @foreach (var item in Model.ListStaff)
+        <p>
+            Select to load
+            <select id="staffDropdown">
+                @foreach (var item in Model.ListStaff)
             {
                 <option id="@item.Id"> @item.FullName </option>
             }
@@ -30,11 +102,10 @@
     }
 
     <div id="staff-container">
-       <p id="ID"> @Model.FirstStaff.Id </p>
+        <p id="ID"> @Model.FirstStaff.Id </p>
         <p id="FullName"> @Model.FirstStaff.FullName </p>
         <p id="Email"> @Model.FirstStaff.Email </p>
         <p id="JobTitle"> @Model.FirstStaff.JobTitle </p>
         <p id="Likes"> @Model.FirstStaff.Likes </p>
-
     </div>
 </div>

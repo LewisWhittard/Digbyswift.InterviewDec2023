@@ -21,10 +21,12 @@ public class HomeController : Controller
         return View(hIVM);
     }
 
-    public IActionResult Edit()
+    [HttpGet("/employee/{id}")]
+    public IActionResult GetStaff(int iD)
     {
-        HomeIndexViewModel hIVM = new HomeIndexViewModel(sS.AllStaff());
-        return View(hIVM);
+        var Data = sS.GetStaffById(iD);
+        StaffViewModel sVM = new StaffViewModel(Data);
+        return Json(sVM);
     }
 
 
