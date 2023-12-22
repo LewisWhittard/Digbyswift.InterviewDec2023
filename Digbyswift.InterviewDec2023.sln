@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digbyswift.InterviewDec2023
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digbyswift.InterviewDec2023.Infrastructure", "Digbyswift.InterviewDec2023.Infrastructure\Digbyswift.InterviewDec2023.Infrastructure.csproj", "{770D8E14-DBA6-4FFB-B7C7-E1F677ED5E41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigbySwiftUnitTests", "DigbySwiftUnitTests\DigbySwiftUnitTests.csproj", "{7B8F6AB2-C778-45B1-AFE9-396C723BDCDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{770D8E14-DBA6-4FFB-B7C7-E1F677ED5E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{770D8E14-DBA6-4FFB-B7C7-E1F677ED5E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{770D8E14-DBA6-4FFB-B7C7-E1F677ED5E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B8F6AB2-C778-45B1-AFE9-396C723BDCDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8F6AB2-C778-45B1-AFE9-396C723BDCDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B8F6AB2-C778-45B1-AFE9-396C723BDCDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8F6AB2-C778-45B1-AFE9-396C723BDCDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
