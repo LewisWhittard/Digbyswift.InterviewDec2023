@@ -1,4 +1,4 @@
-﻿namespace Digbyswift.InterviewDec2023.Infrastructure;
+﻿namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Repository;
 
 public interface IStaffRepository
 {
@@ -52,7 +52,7 @@ public class Staff
 
     public Staff()
     {
-        
+
     }
 
     public Staff(int iD, string fullName, string email, string jobTitle, string[] likes)
