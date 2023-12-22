@@ -30,7 +30,7 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
 
             if (likes == null || likes.Count() == 0)
             {
-                return "None";
+                return "";
             }
             else
             {

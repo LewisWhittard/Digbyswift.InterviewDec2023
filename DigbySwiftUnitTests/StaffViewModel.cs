@@ -54,7 +54,7 @@ namespace DigbySwiftUnitTests
             Assert.Equal("Joe Earnshaw", NoLikes.FullName);
             Assert.Equal("joe@digbyswift.com",NoLikes.Email);
             Assert.Equal("Senior Developer", NoLikes.JobTitle);
-            Assert.Equal("None", NoLikes.Likes);
+            Assert.Equal("", NoLikes.Likes);
 
             Assert.Equal(838, OneLike.Id);
             Assert.Equal("Owen Manby", OneLike.FullName);
