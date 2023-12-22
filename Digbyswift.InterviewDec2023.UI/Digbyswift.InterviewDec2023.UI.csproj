@@ -29,7 +29,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="Data\Staff.Json" />
+      <None Include="Data\Staff.Json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
     <ItemGroup>
