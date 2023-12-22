@@ -9,7 +9,7 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.Controllers;
 
 public class HomeController : Controller
 {
-    private StaffService sS { get; set; }
+    private static StaffService sS { get; set; }
 
     public HomeController()
     {

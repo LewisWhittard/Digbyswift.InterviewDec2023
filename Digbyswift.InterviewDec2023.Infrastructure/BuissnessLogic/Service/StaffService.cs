@@ -4,7 +4,7 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service
 {
     public class StaffService
     {
-        private StaffRepository sR { get; set; }
+        private static StaffRepository sR { get; set; }
 
         public StaffService()
         {
