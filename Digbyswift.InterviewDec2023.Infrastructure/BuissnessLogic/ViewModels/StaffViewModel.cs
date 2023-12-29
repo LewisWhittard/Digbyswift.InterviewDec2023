@@ -1,5 +1,5 @@
-﻿using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Repository;
-using System.ComponentModel.DataAnnotations;
+﻿using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Model;
+
 
 namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
 {

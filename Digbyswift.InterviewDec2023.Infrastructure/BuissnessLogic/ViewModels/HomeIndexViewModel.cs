@@ -1,4 +1,6 @@
-﻿using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Repository;
+﻿using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Model;
+
+
 
 namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
 {
