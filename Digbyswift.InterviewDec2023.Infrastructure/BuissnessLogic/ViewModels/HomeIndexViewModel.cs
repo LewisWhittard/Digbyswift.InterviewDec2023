@@ -6,32 +6,32 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
 {
     public class HomeIndexViewModel
     {
-        public List<StaffViewModel> ListStaff { get; set; }
+        public List<StaffViewModel> ListStaffViewModel { get; set; }
 
 
         public HomeIndexViewModel(List<Staff> staff)
         {
             if (staff.Count() != 0)
             {
-                List<StaffViewModel> lSVM = new List<StaffViewModel>();
+                List<StaffViewModel> listStaffViewModel = new List<StaffViewModel>();
 
                 foreach (Staff item in staff)
                 {
-                    StaffViewModel sVM = new StaffViewModel(item);
-                    lSVM.Add(sVM);
+                    StaffViewModel staffViewModel = new StaffViewModel(item);
+                    listStaffViewModel.Add(staffViewModel);
                 }
 
-                ListStaff = lSVM;
+                ListStaffViewModel = listStaffViewModel;
 
             }
             else
             {
                 string[] likes = { "None" };
                 Staff noneStaff = new Staff(-1, "None", "None", "None", likes);
-                StaffViewModel noneViewModel = new StaffViewModel(noneStaff);
-                List<StaffViewModel> lSVM = new List<StaffViewModel>();
-                lSVM.Add(noneViewModel);
-                ListStaff = lSVM;
+                StaffViewModel staffViewModel = new StaffViewModel(noneStaff);
+                List<StaffViewModel> listStaffViewModel = new List<StaffViewModel>();
+                listStaffViewModel.Add(staffViewModel);
+                ListStaffViewModel = listStaffViewModel;
 
             }
         }
