@@ -18,15 +18,15 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
             FullName = data.FullName;
             Email = data.Email;
             JobTitle = data.JobTitle;
-            Likes = concatenate(data.Likes);
+            Likes = Concatenate(data.Likes);
 
         }
 
-        private string concatenate(string[] likes)
+        private string Concatenate(string[] likes)
         {
-            string Content = "";
+            string content = "";
 
-            int Count = 0;
+            int count = 0;
 
             if (likes == null || likes.Count() == 0)
             {
@@ -36,21 +36,21 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
             {
                 foreach (string item in likes)
                 {
-                    if (Count == 0)
+                    if (count == 0)
                     {
-                        Content += item;
+                        content += item;
                     }
 
                     else
                     {
-                        Content += "," + " " + item;
+                        content += "," + " " + item;
                     }
 
-                    Count++;
+                    count++;
                 }
             }
             
-            return Content;
+            return content;
         }
     }
 }
