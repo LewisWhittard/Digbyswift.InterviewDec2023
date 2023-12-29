@@ -24,23 +24,23 @@ namespace DigbySwiftUnitTests
             HomeIndexViewModel NoStaffViewModel = new HomeIndexViewModel(NoStaff);
             HomeIndexViewModel StaffViewModel = new HomeIndexViewModel(staff);
 
-            Assert.Equal(-1, NoStaffViewModel.ListStaff[0].Id);
-            Assert.Equal("None", NoStaffViewModel.ListStaff[0].FullName);
-            Assert.Equal("None", NoStaffViewModel.ListStaff[0].Email);
-            Assert.Equal("None", NoStaffViewModel.ListStaff[0].JobTitle);
-            Assert.Equal("None", NoStaffViewModel.ListStaff[0].Likes);
+            Assert.Equal(-1, NoStaffViewModel.ListStaffViewModel[0].Id);
+            Assert.Equal("None", NoStaffViewModel.ListStaffViewModel[0].FullName);
+            Assert.Equal("None", NoStaffViewModel.ListStaffViewModel[0].Email);
+            Assert.Equal("None", NoStaffViewModel.ListStaffViewModel[0].JobTitle);
+            Assert.Equal("None", NoStaffViewModel.ListStaffViewModel[0].Likes);
 
-            Assert.Equal(0, StaffViewModel.ListStaff[0].Id);
-            Assert.Equal("Donald Drake", StaffViewModel.ListStaff[0].FullName);
-            Assert.Equal("D.D@digbyswift.com", StaffViewModel.ListStaff[0].Email);
-            Assert.Equal("Developer", StaffViewModel.ListStaff[0].JobTitle);
-            Assert.Equal("Swimming, Running", StaffViewModel.ListStaff[0].Likes);
+            Assert.Equal(0, StaffViewModel.ListStaffViewModel[0].Id);
+            Assert.Equal("Donald Drake", StaffViewModel.ListStaffViewModel[0].FullName);
+            Assert.Equal("D.D@digbyswift.com", StaffViewModel.ListStaffViewModel[0].Email);
+            Assert.Equal("Developer", StaffViewModel.ListStaffViewModel[0].JobTitle);
+            Assert.Equal("Swimming, Running", StaffViewModel.ListStaffViewModel[0].Likes);
 
-            Assert.Equal(1, StaffViewModel.ListStaff[1].Id);
-            Assert.Equal("Mary Beach", StaffViewModel.ListStaff[1].FullName);
-            Assert.Equal("M.B@digbyswift.com", StaffViewModel.ListStaff[1].Email);
-            Assert.Equal("Senior Developer", StaffViewModel.ListStaff[1].JobTitle);
-            Assert.Equal("Walking, Camping", StaffViewModel.ListStaff[1].Likes);
+            Assert.Equal(1, StaffViewModel.ListStaffViewModel[1].Id);
+            Assert.Equal("Mary Beach", StaffViewModel.ListStaffViewModel[1].FullName);
+            Assert.Equal("M.B@digbyswift.com", StaffViewModel.ListStaffViewModel[1].Email);
+            Assert.Equal("Senior Developer", StaffViewModel.ListStaffViewModel[1].JobTitle);
+            Assert.Equal("Walking, Camping", StaffViewModel.ListStaffViewModel[1].Likes);
         }
     }
 }
