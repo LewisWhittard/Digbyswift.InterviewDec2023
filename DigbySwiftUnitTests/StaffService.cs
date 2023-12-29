@@ -35,10 +35,10 @@ namespace DigbySwiftUnitTests
         [Fact]
         public void GetStaffById()
         {
-            StaffService sS = new StaffService();
+            StaffService staffService = new StaffService();
 
-            var Data0 = sS.GetStaffById(123);
-            var Data1 = sS.GetStaffById(838);
+            var Data0 = staffService.GetStaffById(123);
+            var Data1 = staffService.GetStaffById(838);
 
             Assert.Equal(123, Data0.Id);
             Assert.Equal("Kieron McIntyre", Data0.FullName);
