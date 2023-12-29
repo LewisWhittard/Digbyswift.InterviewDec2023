@@ -8,16 +8,17 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Repository;
 public interface IStaffRepository
 {
     Staff Get(int id);
+    IEnumerable<Staff> GetAllStaff();
 }
 
 public class StaffRepositoryJson : IStaffRepository
 {
     public Staff Get(int id)
     {
-        return AllStaff().First(x => x.Id == id);
+        return GetAllStaff().First(x => x.Id == id);
     }
 
-    public IEnumerable<Staff> AllStaff()
+    public IEnumerable<Staff> GetAllStaff()
     {
         // Specify the path to your JSON file
         string jsonFilePath = Path.Combine(Directory.GetCurrentDirectory() + "/Data", "Staff.json");

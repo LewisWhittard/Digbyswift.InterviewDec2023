@@ -5,11 +5,11 @@ namespace DigbySwiftUnitTests
     public class StaffRepositoryUnitTests
     {
         [Fact]
-        public void AllStaff()
+        public void GetAllStaff()
         {
             StaffRepositoryJson sR = new StaffRepositoryJson();
 
-            var Data = sR.AllStaff().ToList();
+            var Data = sR.GetAllStaff().ToList();
 
             Assert.Equal(123, Data[0].Id);
             Assert.Equal("Kieron McIntyre", Data[0].FullName);

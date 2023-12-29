@@ -17,7 +17,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        HomeIndexViewModel viewModel = new HomeIndexViewModel(_staffService.AllStaff());
+        HomeIndexViewModel viewModel = new HomeIndexViewModel(_staffService.GetAllStaff());
         return View(viewModel);
     }
 

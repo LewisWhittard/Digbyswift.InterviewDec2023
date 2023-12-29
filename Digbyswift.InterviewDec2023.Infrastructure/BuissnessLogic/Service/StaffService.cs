@@ -13,9 +13,9 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service
             _staffRepository = new StaffRepositoryJson();
         }
 
-        public List<Staff> AllStaff()
+        public List<Staff> GetAllStaff()
         {
-            return _staffRepository.AllStaff().ToList();
+            return _staffRepository.GetAllStaff().ToList();
         }
 
         public Staff GetStaffById(int id) 
