@@ -6,21 +6,21 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service
 {
     public class StaffService
     {
-        private static StaffRepositoryJson sR { get; set; }
+        private static StaffRepositoryJson _staffRepository { get; set; }
 
         public StaffService()
         {
-            sR = new StaffRepositoryJson();
+            _staffRepository = new StaffRepositoryJson();
         }
 
         public List<Staff> AllStaff()
         {
-            return sR.AllStaff().ToList();
+            return _staffRepository.AllStaff().ToList();
         }
 
         public Staff GetStaffById(int id) 
         {
-            return sR.Get(id);
+            return _staffRepository.Get(id);
         }
     }
 }
