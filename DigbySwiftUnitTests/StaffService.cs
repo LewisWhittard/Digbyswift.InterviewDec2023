@@ -1,4 +1,4 @@
-﻿using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service;
+﻿using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Service;
 
 namespace DigbySwiftUnitTests
 {

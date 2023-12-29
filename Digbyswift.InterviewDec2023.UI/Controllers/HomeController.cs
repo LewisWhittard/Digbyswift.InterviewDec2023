@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service;
-using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels;
+using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Service;
+using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.ViewModels;
 
 
 
