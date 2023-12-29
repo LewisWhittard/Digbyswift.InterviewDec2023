@@ -1,5 +1,5 @@
-﻿using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Repository;
-using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Model;
+﻿using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Repository;
+using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Model;
 
 
 namespace Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Service
