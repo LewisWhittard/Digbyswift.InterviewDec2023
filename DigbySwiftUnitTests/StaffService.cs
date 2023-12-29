@@ -1,10 +1,4 @@
-﻿using Digbyswift.InterviewDec2023.Infrastructure;
-using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service;
 
 namespace DigbySwiftUnitTests
 {
