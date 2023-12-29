@@ -2,7 +2,7 @@
 
 
 
-namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels
+namespace Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.ViewModels
 {
     public class HomeIndexViewModel
     {

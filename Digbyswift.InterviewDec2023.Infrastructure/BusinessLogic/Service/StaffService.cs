@@ -2,7 +2,7 @@
 using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Model;
 
 
-namespace Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service
+namespace Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Service
 {
     public class StaffService
     {
