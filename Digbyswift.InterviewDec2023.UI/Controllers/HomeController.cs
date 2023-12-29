@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic;
 using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.Service;
 using Digbyswift.InterviewDec2023.Infrastructure.BuissnessLogic.ViewModels;
 
@@ -9,26 +8,24 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.Controllers;
 
 public class HomeController : Controller
 {
-    private static StaffService sS { get; set; }
+    private static StaffService _staffService { get; set; }
 
     public HomeController()
     {
-        sS = new StaffService();
+        _staffService = new StaffService();
     }
 
     public IActionResult Index()
     {
-        HomeIndexViewModel hIVM = new HomeIndexViewModel(sS.AllStaff());
-        return View(hIVM);
+        HomeIndexViewModel viewModel = new HomeIndexViewModel(_staffService.AllStaff());
+        return View(viewModel);
     }
 
     [HttpGet("/employee/{id}")]
-    public IActionResult GetStaff(int iD)
+    public IActionResult GetStaff(int id)
     {
-        var Data = sS.GetStaffById(iD);
-        StaffViewModel sVM = new StaffViewModel(Data);
-        return Json(sVM);
+        var data = _staffService.GetStaffById(id);
+        StaffViewModel viewModel = new StaffViewModel(data);
+        return Json(viewModel);
     }
-
-
 }
