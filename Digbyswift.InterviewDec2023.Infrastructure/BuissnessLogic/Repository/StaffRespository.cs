@@ -31,12 +31,12 @@ public class StaffRepositoryJson : IStaffRepository
             return new List<Staff>();
         }
 
-        StaffContainer sC = JsonConvert.DeserializeObject<StaffContainer>(jsonContent, new JsonSerializerSettings
+        StaffContainer staffContainer = JsonConvert.DeserializeObject<StaffContainer>(jsonContent, new JsonSerializerSettings
         {
             TypeNameHandling = TypeNameHandling.All
         });
 
-        return sC.Staff;
+        return staffContainer.Staff;
     }
 }
 
