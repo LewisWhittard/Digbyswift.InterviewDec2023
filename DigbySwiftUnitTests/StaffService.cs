@@ -5,7 +5,7 @@ namespace DigbySwiftUnitTests
     public class StaffServiceUnitTests
     {
         [Fact]
-        public void GetAllStaff()
+        public void GetAllStaffShouldReturnListOfStaffMembers()
         {
             StaffService staffService = new StaffService();
 
@@ -33,7 +33,7 @@ namespace DigbySwiftUnitTests
         }
 
         [Fact]
-        public void GetStaffById()
+        public void GetStaffByIdShouldReturnSpecificStaffMember()
         {
             StaffService staffService = new StaffService();
 
