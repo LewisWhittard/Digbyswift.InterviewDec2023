@@ -35,27 +35,27 @@ namespace DigbySwiftUnitTests
             }
         };
 
-            StaffViewModel MultipleLikes = new StaffViewModel(list[0]);
-            StaffViewModel NoLikes = new StaffViewModel(list[1]);
-            StaffViewModel OneLike = new StaffViewModel(list[2]);
+            StaffViewModel multipleLikes = new StaffViewModel(list[0]);
+            StaffViewModel noLikes = new StaffViewModel(list[1]);
+            StaffViewModel oneLike = new StaffViewModel(list[2]);
 
-            Assert.Equal(123, MultipleLikes.Id);
-            Assert.Equal("Kieron McIntyre", MultipleLikes.FullName);
-            Assert.Equal("kieron@digbyswift.com", MultipleLikes.Email);
-            Assert.Equal("Owner/Lead Developer", MultipleLikes.JobTitle);
-            Assert.Equal("Code, Karate", MultipleLikes.Likes);
+            Assert.Equal(123, multipleLikes.Id);
+            Assert.Equal("Kieron McIntyre", multipleLikes.FullName);
+            Assert.Equal("kieron@digbyswift.com", multipleLikes.Email);
+            Assert.Equal("Owner/Lead Developer", multipleLikes.JobTitle);
+            Assert.Equal("Code, Karate", multipleLikes.Likes);
 
-            Assert.Equal(556, NoLikes.Id);
-            Assert.Equal("Joe Earnshaw", NoLikes.FullName);
-            Assert.Equal("joe@digbyswift.com",NoLikes.Email);
-            Assert.Equal("Senior Developer", NoLikes.JobTitle);
-            Assert.Equal("", NoLikes.Likes);
+            Assert.Equal(556, noLikes.Id);
+            Assert.Equal("Joe Earnshaw", noLikes.FullName);
+            Assert.Equal("joe@digbyswift.com",noLikes.Email);
+            Assert.Equal("Senior Developer", noLikes.JobTitle);
+            Assert.Equal("", noLikes.Likes);
 
-            Assert.Equal(838, OneLike.Id);
-            Assert.Equal("Owen Manby", OneLike.FullName);
-            Assert.Equal("owen@digbyswift.com", OneLike.Email);
-            Assert.Equal(null, OneLike.JobTitle);
-            Assert.Equal("Tintin", OneLike.Likes);
+            Assert.Equal(838, oneLike.Id);
+            Assert.Equal("Owen Manby", oneLike.FullName);
+            Assert.Equal("owen@digbyswift.com", oneLike.Email);
+            Assert.Equal(null, oneLike.JobTitle);
+            Assert.Equal("Tintin", oneLike.Likes);
 
         }
     }
