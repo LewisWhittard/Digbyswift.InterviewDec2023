@@ -6,7 +6,7 @@ namespace DigbySwiftUnitTests
     public class StaffViewModelUnitTests
     {
         [Fact]
-        public void ContructViewModel()
+        public void StaffViewModelConstructedCorrectly()
         {
             var list = new Staff[]
             {
