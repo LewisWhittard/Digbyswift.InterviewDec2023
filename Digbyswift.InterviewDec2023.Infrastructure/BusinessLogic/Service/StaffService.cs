@@ -6,7 +6,7 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Service
 {
     public class StaffService
     {
-        private static StaffRepositoryJson _staffRepository { get; set; }
+        private readonly StaffRepositoryJson _staffRepository;
 
         public StaffService(StaffRepositoryJson staffRepository)
         {
