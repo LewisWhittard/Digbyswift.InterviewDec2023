@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Service;
 using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.ViewModels;
+using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Repository;
 
 
 
@@ -12,7 +13,8 @@ public class HomeController : Controller
 
     public HomeController()
     {
-        _staffService = new StaffService();
+        StaffRepositoryJson staffRepositoryJson = new StaffRepositoryJson();
+        _staffService = new StaffService(staffRepositoryJson);
     }
 
     public IActionResult Index()

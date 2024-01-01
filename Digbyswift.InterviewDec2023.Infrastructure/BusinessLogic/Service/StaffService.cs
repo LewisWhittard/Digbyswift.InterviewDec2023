@@ -8,9 +8,10 @@ namespace Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Service
     {
         private static StaffRepositoryJson _staffRepository { get; set; }
 
-        public StaffService()
+        public StaffService(StaffRepositoryJson staffRepository)
         {
-            _staffRepository = new StaffRepositoryJson();
+            
+            _staffRepository = staffRepository;
         }
 
         public List<Staff> GetAllStaff()

@@ -1,4 +1,5 @@
-﻿using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Service;
+﻿using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Repository;
+using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Service;
 
 namespace DigbySwiftUnitTests
 {
@@ -7,7 +8,8 @@ namespace DigbySwiftUnitTests
         [Fact]
         public void GetAllStaffShouldReturnListOfStaffMembers()
         {
-            StaffService staffService = new StaffService();
+            StaffRepositoryJson staffRepository = new StaffRepositoryJson();
+            StaffService staffService = new StaffService(staffRepository);
 
             var listStaff = staffService.GetAllStaff();
 
@@ -35,7 +37,8 @@ namespace DigbySwiftUnitTests
         [Fact]
         public void GetStaffByIdShouldReturnSpecificStaffMember()
         {
-            StaffService staffService = new StaffService();
+            StaffRepositoryJson staffRepository = new StaffRepositoryJson();
+            StaffService staffService = new StaffService(staffRepository);
 
             var listStaff0 = staffService.GetStaffById(123);
             var listStaff1 = staffService.GetStaffById(838);
