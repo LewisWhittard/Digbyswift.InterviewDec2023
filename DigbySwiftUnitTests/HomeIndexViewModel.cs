@@ -44,6 +44,7 @@ namespace DigbySwiftUnitTests
             Assert.Equal("None", sut.ListStaffViewModel[0].Email);
             Assert.Equal("None", sut.ListStaffViewModel[0].JobTitle);
             Assert.Equal("None", sut.ListStaffViewModel[0].Likes);
+            Dispose( );
         }
     }
 }
