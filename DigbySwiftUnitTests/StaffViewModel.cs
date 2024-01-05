@@ -7,39 +7,21 @@ namespace DigbySwiftUnitTests
 
     public class StaffViewModelUnitTests
     {
+        public Staff[] Staff { get; set; }
+
+        public void SetUp()
+        {
+            Staff = SharedTestData.StaffArray;
+        }
+
         [Fact]
         public void Ctor_StaffViewModel_PopulatedFromStaffCorrectly()
         {
-            var list = new Staff[]
-            {
-                new Staff()
-                {
-                    Id = 123,
-                    FullName = "Kieron McIntyre",
-                    Email = "kieron@digbyswift.com",
-                    JobTitle = "Owner/Lead Developer",
-                    Likes = new [] {"Code", "Karate"}
-                },
-                new Staff()
-                {
-                Id = 556,
-                FullName = "Joe Earnshaw",
-                Email = "joe@digbyswift.com",
-                JobTitle = "Senior Developer"
-            },
-            
-                new Staff()
-            {
-                Id = 838,
-                FullName = "Owen Manby",
-                Email = "owen@digbyswift.com",
-                Likes = new [] {"Tintin"}
-            }
-        };
 
-            StaffViewModel multipleLikes = new StaffViewModel(list[0]);
-            StaffViewModel noLikes = new StaffViewModel(list[1]);
-            StaffViewModel oneLike = new StaffViewModel(list[2]);
+
+            StaffViewModel multipleLikes = new StaffViewModel(Staff[0]);
+            StaffViewModel noLikes = new StaffViewModel(Staff[1]);
+            StaffViewModel oneLike = new StaffViewModel(Staff[2]);
 
             Assert.Equal(123, multipleLikes.Id);
             Assert.Equal("Kieron McIntyre", multipleLikes.FullName);
@@ -64,33 +46,7 @@ namespace DigbySwiftUnitTests
         [Fact]
         public void Concatenate_StaffViewModel_ConcatianteOneLike()
         {
-            var list = new Staff[]
-            {
-                new Staff()
-                {
-                    Id = 123,
-                    FullName = "Kieron McIntyre",
-                    Email = "kieron@digbyswift.com",
-                    JobTitle = "Owner/Lead Developer",
-                    Likes = new [] {"Code", "Karate"}
-                },
-                new Staff()
-                {
-                Id = 556,
-                FullName = "Joe Earnshaw",
-                Email = "joe@digbyswift.com",
-                JobTitle = "Senior Developer"
-            },
-
-                new Staff()
-            {
-                Id = 838,
-                FullName = "Owen Manby",
-                Email = "owen@digbyswift.com",
-                Likes = new [] {"Tintin"}
-            }
-        };
-            StaffViewModel sut = new StaffViewModel(list[2]);
+            StaffViewModel sut = new StaffViewModel(Staff[2]);
             
             Assert.Equal("Tintin", sut.Likes);
 
@@ -99,33 +55,7 @@ namespace DigbySwiftUnitTests
         [Fact]
         public void Concatenate_StaffViewModel_ConcatianteZeroLikes()
         {
-            var list = new Staff[]
-            {
-                new Staff()
-                {
-                    Id = 123,
-                    FullName = "Kieron McIntyre",
-                    Email = "kieron@digbyswift.com",
-                    JobTitle = "Owner/Lead Developer",
-                    Likes = new [] {"Code", "Karate"}
-                },
-                new Staff()
-                {
-                Id = 556,
-                FullName = "Joe Earnshaw",
-                Email = "joe@digbyswift.com",
-                JobTitle = "Senior Developer"
-            },
-
-                new Staff()
-            {
-                Id = 838,
-                FullName = "Owen Manby",
-                Email = "owen@digbyswift.com",
-                Likes = new [] {"Tintin"}
-            }
-        };
-            StaffViewModel sut = new StaffViewModel(list[1]);
+            StaffViewModel sut = new StaffViewModel(Staff[1]);
 
             Assert.Equal("", sut.Likes);
 
@@ -134,34 +64,8 @@ namespace DigbySwiftUnitTests
         [Fact]
         public void Concatenate_StaffViewModel_MultipleLikes()
         {
-            var list = new Staff[]
-            {
-                new Staff()
-                {
-                    Id = 123,
-                    FullName = "Kieron McIntyre",
-                    Email = "kieron@digbyswift.com",
-                    JobTitle = "Owner/Lead Developer",
-                    Likes = new [] {"Code", "Karate"}
-                },
-                new Staff()
-                {
-                Id = 556,
-                FullName = "Joe Earnshaw",
-                Email = "joe@digbyswift.com",
-                JobTitle = "Senior Developer"
-            },
 
-                new Staff()
-            {
-                Id = 838,
-                FullName = "Owen Manby",
-                Email = "owen@digbyswift.com",
-                Likes = new [] {"Tintin"}
-            }
-        };
-
-            StaffViewModel sut = new StaffViewModel(list[0]);
+            StaffViewModel sut = new StaffViewModel(Staff[0]);
 
             Assert.Equal("Code, Karate", sut.Likes);
 
