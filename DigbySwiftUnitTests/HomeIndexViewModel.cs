@@ -7,7 +7,7 @@ namespace DigbySwiftUnitTests
     public class HomeIndexViewModelUnitTests
     {
         [Fact]
-        public void ShouldCreateHomeIndexViewModelWithCorrectData()
+        public void Ctor_HomeIndexViewModel_Populated()
         {
             List<Staff> noStaff = new List<Staff>();
             List<Staff> listStaff = new List<Staff>();
@@ -41,6 +41,20 @@ namespace DigbySwiftUnitTests
             Assert.Equal("M.B@digbyswift.com", staffViewModel.ListStaffViewModel[1].Email);
             Assert.Equal("Senior Developer", staffViewModel.ListStaffViewModel[1].JobTitle);
             Assert.Equal("Walking, Camping", staffViewModel.ListStaffViewModel[1].Likes);
+        }
+
+        [Fact]
+        public void Ctor_HomeIndexViewModel_Unpopulated()
+        {
+            List<Staff> Staff = new List<Staff>();
+
+            HomeIndexViewModel StaffViewModel = new HomeIndexViewModel(Staff);
+
+            Assert.Equal(-1, StaffViewModel.ListStaffViewModel[0].Id);
+            Assert.Equal("None", StaffViewModel.ListStaffViewModel[0].FullName);
+            Assert.Equal("None", StaffViewModel.ListStaffViewModel[0].Email);
+            Assert.Equal("None", StaffViewModel.ListStaffViewModel[0].JobTitle);
+            Assert.Equal("None", StaffViewModel.ListStaffViewModel[0].Likes);
         }
     }
 }

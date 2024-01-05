@@ -3,10 +3,12 @@ using Digbyswift.InterviewDec2023.Infrastructure.BusinessLogic.Model;
 
 namespace DigbySwiftUnitTests
 {
+
+
     public class StaffViewModelUnitTests
     {
         [Fact]
-        public void StaffViewModelConstructedCorrectly()
+        public void Ctor_StaffViewModel_PopulatedFromListOfStaffCorrectly()
         {
             var list = new Staff[]
             {

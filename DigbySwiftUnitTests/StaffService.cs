@@ -6,7 +6,7 @@ namespace DigbySwiftUnitTests
     public class StaffServiceUnitTests
     {
         [Fact]
-        public void GetAllStaffShouldReturnListOfStaffMembers()
+        public void GetAllStaff_AllStaffAsList_Correctly()
         {
             StaffRepositoryJson staffRepository = new StaffRepositoryJson();
             StaffService staffService = new StaffService(staffRepository);
@@ -35,7 +35,7 @@ namespace DigbySwiftUnitTests
         }
 
         [Fact]
-        public void GetStaffByIdShouldReturnSpecificStaffMember()
+        public void Get_IndividualStaff_Correctly()
         {
             StaffRepositoryJson staffRepository = new StaffRepositoryJson();
             StaffService staffService = new StaffService(staffRepository);
