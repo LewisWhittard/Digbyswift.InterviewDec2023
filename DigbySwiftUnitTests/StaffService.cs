@@ -9,9 +9,9 @@ namespace DigbySwiftUnitTests
         public void GetAllStaff_AllStaffAsList_Correctly()
         {
             StaffRepositoryJson staffRepository = new StaffRepositoryJson();
-            StaffService staffService = new StaffService(staffRepository);
+            StaffService sut = new StaffService(staffRepository);
 
-            var listStaff = staffService.GetAllStaff();
+            var listStaff = sut.GetAllStaff();
 
             Assert.Equal(123, listStaff[0].Id);
             Assert.Equal("Kieron McIntyre", listStaff[0].FullName);
@@ -38,10 +38,10 @@ namespace DigbySwiftUnitTests
         public void Get_IndividualStaff_Correctly()
         {
             StaffRepositoryJson staffRepository = new StaffRepositoryJson();
-            StaffService staffService = new StaffService(staffRepository);
+            StaffService sut = new StaffService(staffRepository);
 
-            var listStaff0 = staffService.GetStaffById(123);
-            var listStaff1 = staffService.GetStaffById(838);
+            var listStaff0 = sut.GetStaffById(123);
+            var listStaff1 = sut.GetStaffById(838);
 
             Assert.Equal(123, listStaff0.Id);
             Assert.Equal("Kieron McIntyre", listStaff0.FullName);

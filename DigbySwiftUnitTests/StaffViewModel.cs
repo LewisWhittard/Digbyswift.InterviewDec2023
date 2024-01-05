@@ -8,7 +8,7 @@ namespace DigbySwiftUnitTests
     public class StaffViewModelUnitTests
     {
         [Fact]
-        public void Ctor_StaffViewModel_PopulatedFromListOfStaffCorrectly()
+        public void Ctor_StaffViewModel_PopulatedFromStaffCorrectly()
         {
             var list = new Staff[]
             {
@@ -58,6 +58,112 @@ namespace DigbySwiftUnitTests
             Assert.Equal("owen@digbyswift.com", oneLike.Email);
             Assert.Equal(null, oneLike.JobTitle);
             Assert.Equal("Tintin", oneLike.Likes);
+
+        }
+
+        [Fact]
+        public void Concatenate_StaffViewModel_ConcatianteOneLike()
+        {
+            var list = new Staff[]
+            {
+                new Staff()
+                {
+                    Id = 123,
+                    FullName = "Kieron McIntyre",
+                    Email = "kieron@digbyswift.com",
+                    JobTitle = "Owner/Lead Developer",
+                    Likes = new [] {"Code", "Karate"}
+                },
+                new Staff()
+                {
+                Id = 556,
+                FullName = "Joe Earnshaw",
+                Email = "joe@digbyswift.com",
+                JobTitle = "Senior Developer"
+            },
+
+                new Staff()
+            {
+                Id = 838,
+                FullName = "Owen Manby",
+                Email = "owen@digbyswift.com",
+                Likes = new [] {"Tintin"}
+            }
+        };
+            StaffViewModel sut = new StaffViewModel(list[2]);
+            
+            Assert.Equal("Tintin", sut.Likes);
+
+        }
+
+        [Fact]
+        public void Concatenate_StaffViewModel_ConcatianteZeroLikes()
+        {
+            var list = new Staff[]
+            {
+                new Staff()
+                {
+                    Id = 123,
+                    FullName = "Kieron McIntyre",
+                    Email = "kieron@digbyswift.com",
+                    JobTitle = "Owner/Lead Developer",
+                    Likes = new [] {"Code", "Karate"}
+                },
+                new Staff()
+                {
+                Id = 556,
+                FullName = "Joe Earnshaw",
+                Email = "joe@digbyswift.com",
+                JobTitle = "Senior Developer"
+            },
+
+                new Staff()
+            {
+                Id = 838,
+                FullName = "Owen Manby",
+                Email = "owen@digbyswift.com",
+                Likes = new [] {"Tintin"}
+            }
+        };
+            StaffViewModel sut = new StaffViewModel(list[1]);
+
+            Assert.Equal("", sut.Likes);
+
+        }
+
+        [Fact]
+        public void Concatenate_StaffViewModel_MultipleLikes()
+        {
+            var list = new Staff[]
+            {
+                new Staff()
+                {
+                    Id = 123,
+                    FullName = "Kieron McIntyre",
+                    Email = "kieron@digbyswift.com",
+                    JobTitle = "Owner/Lead Developer",
+                    Likes = new [] {"Code", "Karate"}
+                },
+                new Staff()
+                {
+                Id = 556,
+                FullName = "Joe Earnshaw",
+                Email = "joe@digbyswift.com",
+                JobTitle = "Senior Developer"
+            },
+
+                new Staff()
+            {
+                Id = 838,
+                FullName = "Owen Manby",
+                Email = "owen@digbyswift.com",
+                Likes = new [] {"Tintin"}
+            }
+        };
+
+            StaffViewModel sut = new StaffViewModel(list[0]);
+
+            Assert.Equal("Code, Karate", sut.Likes);
 
         }
     }
